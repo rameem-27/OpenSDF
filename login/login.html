@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>OpenSDF</title>
+    <style>body{
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background: linear-gradient(120deg,#4169E1,#8A2BE2);
+        height: 100vh;
+        overflow: hidden;
+    }
+    .Center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 400px;
+        background:white;
+        border-radius: 10px;
+    }
+    .Center form{
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+    form .txt_field{
+        position: relative;
+        border-bottom: 2px solid #adadad;
+        margin: 30px;
+    }
+    .txt_field input{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: .5px;
+        height: 32px;
+        font-size: 15px;
+        border: none;
+        background: none;
+        outline: none;
+    }
+    .txt_field label{
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        color: #adadad;
+        transform: translateY(-5%);
+        font-size: 12px;
+        pointer-events: none;
+        transition: .2s;
+    }
+    .txt_field span::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #2691d9;
+        transition: .5s;
+    }
+     .txt_field input:focus ~ label,
+     .txt_field input:valid ~ label{
+        top: -5px;
+        color: #2691d9;
+     }
+     .txt_field input:focus ~ span::before,
+     .txt_field input:valid ~ span::before{
+        width: 100%;
+     }
+     input[type="submit"]{
+        margin-left: 9%;
+        width: 82%;
+        height: 50%;
+        border: 1px solid;
+        border-radius: 10px;
+        border-style: hidden;
+        background: linear-gradient(120deg,#4169E1,#8A2BE2);
+        height: 6vh;
+        overflow: hidden;
+        font-size: 20px;
+        color: #e9f4e8;
+        cursor: pointer;
+        outline: none;
+    }
+    .forgot a{
+        margin: 50px 110px;
+        font-size: 14px;
+        color: #4169E1;
+        position: absolute;
+    }
+    .signup{
+        margin: 40px 0;
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+    }
+    .signup a{
+        color: #4169E1;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="Center">
+        <form method="post">
+            <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="forgot"><a href="">Forgot Password?</a> </div>
+            <input type="submit" value="login">
+            <div class="signup">Don't have an account?
+                <a href="">SignUp</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="title">
+        <h1>SDF monitoring</h1>
+    </div>
+</body>
+</html>
